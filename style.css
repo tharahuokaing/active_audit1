@@ -1,0 +1,260 @@
+/* Layout Global Foundation Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.audit-dashboard {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Component Configuration */
+.module-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.module-header h2 {
+    color: #38bdf8;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.module-header p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
+/* Functional Buttons Configuration */
+.btn-primary {
+    background-color: #0284c7;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover { background-color: #0369a1; }
+
+.btn-secondary {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    border-color: #64748b;
+    background-color: #1e293b;
+}
+
+/* Telemetry Cards Row */
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.metric-card {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.metric-card h2 {
+    font-size: 2rem;
+    color: #f8fafc;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.card-subtext { font-size: 0.85rem; }
+.card-subtext.state-normal { color: #64748b; }
+.card-subtext.state-success { color: #10b981; }
+.card-subtext.state-warning { color: #f59e0b; }
+
+/* Workspace Splitting Formats */
+.panel-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1.7fr;
+    gap: 25px;
+}
+
+@media (max-width: 1024px) {
+    .panel-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.data-panel {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 24px;
+    min-height: 485px;
+}
+
+.panel-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 12px;
+}
+
+.panel-title h3 {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+/* Compliance Navigation Filtering Pills */
+.filter-pills {
+    display: flex;
+    background-color: #0f172a;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.pill {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pill.active {
+    background-color: #1e293b;
+    color: #38bdf8;
+}
+
+/* Compliance Control Item Checklist Grid Mapping */
+.checklist-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checklist-card {
+    background-color: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.checklist-card:hover {
+    border-color: #1e293b;
+    background-color: #141b2d;
+}
+
+.checklist-info h4 {
+    font-size: 0.95rem;
+    color: #f8fafc;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.checklist-info p {
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.status-badge.verified { background-color: rgba(16, 185, 129, 0.15); color: #10b981; }
+.status-badge.pending { background-color: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+
+/* Continuous Verification Audit Data Ledger Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.audit-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.audit-table th {
+    color: #64748b;
+    padding: 12px;
+    border-bottom: 2px solid #1f2937;
+    font-weight: 600;
+}
+
+.audit-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #1f2937;
+    color: #cbd5e1;
+}
+
+.timestamp-column {
+    font-family: monospace;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.scope-badge {
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+.audit-badge {
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.audit-badge.nominal { background-color: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.2); }
+.audit-badge.critical { background-color: rgba(244, 63, 94, 0.1); color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.2); }
